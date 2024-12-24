@@ -34,6 +34,90 @@
 	font-family: 'Poppins-Reg';
 }
 
+.wrapper .loading {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.wrapper .loading .dot {
+	width: 25px;
+	height: 25px;
+	background: linear-gradient(
+		90deg,
+		rgba(180, 107, 58, 1) 0%,
+		rgba(253, 96, 29, 1) 50%,
+		rgba(252, 136, 69, 1) 100%
+	);
+	border-radius: 50%;
+	animation: bounce 1.5s infinite ease-in-out, color-change 1.5s infinite;
+}
+
+.wrapper .loading .dot:nth-child(2) {
+	animation-delay: 0.3s;
+}
+
+.wrapper .loading .dot:nth-child(3) {
+	animation-delay: 0.6s;
+}
+
+.wrapper .loading .dot:nth-child(4) {
+	animation-delay: 0.9s;
+}
+
+@keyframes bounce {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-30px);
+	}
+}
+
+@keyframes color-change {
+	0%,
+	100% {
+		background: linear-gradient(
+			90deg,
+			rgba(180, 107, 58, 1) 0%,
+			rgba(253, 96, 29, 1) 50%,
+			rgba(252, 136, 69, 1) 100%
+		);
+	}
+	50% {
+		background: linear-gradient(
+			90deg,
+			rgba(58, 107, 180, 1) 0%,
+			rgba(29, 96, 253, 1) 50%,
+			rgba(69, 136, 252, 1) 100%
+		);
+	}
+}
+
+/* Селектор для всей полосы прокрутки */
+::-webkit-scrollbar {
+	width: 10px; /* Ширина вертикального скроллбара */
+}
+
+/* Селектор для дорожки скроллбара */
+::-webkit-scrollbar-track {
+	background: #1c140f; /* Цвет фона дорожки */
+}
+
+/* Селектор для ползунка (Thumb) */
+::-webkit-scrollbar-thumb {
+	background: #dc7000; /* Пример: полупрозрачный ползунок */
+	border-radius: 5px; /* Скругление углов */
+}
+
+/* Селектор для ползунка при наведении */
+::-webkit-scrollbar-thumb:hover {
+	background: #9c5100; /* Цвет при наведении */
+}
+
 a {
 	text-decoration: none;
 }
@@ -90,13 +174,95 @@ header nav ul li.active::after {
 	background: #dc7000;
 	position: relative;
 	top: 5px;
-	left: -10px;
+	left: -15px;
 }
 
 header nav ul li a {
 	transition: all 200ms ease;
 }
 
-header nav ul li:not(.btn):not(.active) a:hover {
+header nav ul li:not(.active) a:not(.btn):hover {
 	border-bottom: 5px solid #dc7000;
+}
+
+header nav ul li a.btn {
+	background: #fa9021;
+	border: 1px solid #fa9021;
+	padding: 12px 23px;
+	border-radius: 6px;
+	transition: all 800ms ease;
+	cursor: pointer;
+}
+
+header nav ul li a.btn:hover {
+	background: transparent;
+	border: 1px solid #fa9021;
+	transition: all 500ms ease;
+}
+
+.hero {
+	margin: 110px 0;
+}
+
+.hero--text {
+	display: block;
+	margin-bottom: 45px;
+}
+
+.hero--text p {
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+.hero--text p span {
+	color: #e47500;
+}
+
+.hero--text h1 {
+	text-align: center;
+	font-family: 'Poppins-SemiBold';
+	margin-bottom: 13px;
+}
+
+.hero--text h4 {
+	font-family: 'Poppins-Med';
+	font-size: 16px;
+
+	/* line-height: 30px; */
+	line-height: 187%;
+	text-align: center;
+	color: #fff;
+}
+
+.hero--info {
+	background: #1c140f;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 91px;
+	margin-top: 45px;
+}
+
+.hero--info .block {
+	display: flex;
+	gap: 16px;
+	margin-top: 36px;
+}
+
+.hero--info .block img {
+	width: 55px;
+	height: 55px;
+}
+
+.hero--info .block div {
+	width: 65px;
+	height: 65px;
+}
+
+.hero--info .line {
+	width: 2px; /* Толщина линии */
+	height: 128px; /* Высота линии */
+	background-color: #eeeff2; /* Цвет линии */
+	margin: 0 20px; /* Отступы между элементами */
 }
