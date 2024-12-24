@@ -8,6 +8,12 @@
 	</head>
 	<body>
 		<div class="wrapper">
+			<div class="loading">
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+			</div>
 			<header class="container">
 				<span><a href="index.html" class="logo">logo</a></span>
 				<nav>
@@ -16,11 +22,55 @@
 						<li><a href="about-us.html">About us</a></li>
 						<li class="active"><a href="#">Portfolio</a></li>
 						<li><a href="#">News</a></li>
-						<li class="btn"><a href="#">Contact us</a></li>
+						<li><a href="#" class="btn">Contact us</a></li>
 					</ul>
 				</nav>
 			</header>
+
+			<main class="container">
+				<div class="hero">
+					<div class="hero--text">
+						<p>Home > <span>Services</span></p>
+						<h1>Lorem Ipsum is simply dummy text of the printing and.</h1>
+						<h4>
+							Lorem Ipsum is simply dummy text of the printing and typesetting
+							industry.
+						</h4>
+					</div>
+					<div class="hero--info">
+						<div class="block">
+							<img src="img/Portfolio/hero/user.svg" />
+							<div>
+								<h2>90+</h2>
+								<p>Clients</p>
+							</div>
+						</div>
+						<div class="line"></div>
+						<div class="block">
+							<img src="img/Portfolio/hero/location.svg" />
+							<div>
+								<h2>30+</h2>
+								<p>Countries</p>
+							</div>
+						</div>
+						<div class="line"></div>
+						<div class="block">
+							<img src="img/Portfolio/hero/Server.svg" />
+							<div>
+								<h2>50+</h2>
+								<p>Projects</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
 		</div>
 	</body>
-	<script src="js/script.js"></script>
+	<script>
+		var loading = document.querySelector('.loading')
+
+		window.addEventListener('load', function () {
+			loading.style.display = 'none'
+		})
+	</script>
 </html>
