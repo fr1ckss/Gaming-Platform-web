@@ -47,6 +47,11 @@ img {
 body {
 	font-weight: 400;
 	font-size: 16px;
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(26, 14, 1, 1) 100%
+	);
 }
 
 .wrapper {
@@ -67,7 +72,8 @@ header {
 	padding: 50px 0;
 }
 
-header span a.logo {
+header span a.logo,
+footer div span a.logo {
 	text-transform: uppercase;
 	font-family: 'Poppins-ExtraBold';
 	font-size: 29px;
@@ -106,7 +112,8 @@ header nav ul li:not(.active) a:not(.btn):hover {
 header nav ul li a.btn,
 .port a.btn,
 .port2 a.btn,
-.port3 a.btn {
+.port3 a.btn,
+.email .sub button {
 	background: #fa9021;
 	border: 1px solid #fa9021;
 	padding: 12px 23px;
@@ -118,7 +125,8 @@ header nav ul li a.btn,
 header nav ul li a.btn:hover,
 .port a.btn:hover,
 .port2 a.btn:hover,
-.port3 a.btn:hover {
+.port3 a.btn:hover,
+.email .sub button:hover {
 	background: transparent;
 	border: 1px solid #fa9021;
 	transition: all 500ms ease;
@@ -196,6 +204,8 @@ header nav ul li a.btn:hover,
 	margin-left: 60px;
 }
 
+/* Промо видос */
+
 .video--info {
 	display: inline-block;
 	z-index: 2;
@@ -251,6 +261,8 @@ header nav ul li a.btn:hover,
 	display: flex;
 	margin-right: 10px;
 }
+
+/* Роботы */
 
 .port {
 	margin-bottom: 190px;
@@ -353,6 +365,8 @@ header nav ul li a.btn:hover,
 	position: absolute;
 	transform: translate(150%, -95%);
 }
+
+/* Отзывы */
 
 .reviews {
 	background: #1c140f;
@@ -532,6 +546,147 @@ header nav ul li a.btn:hover,
 	transform: scale(1.1);
 }
 
+/* Подписка на рассылку */
+
+.email {
+	margin: 130px auto;
+}
+
+.email > h2 {
+	font-size: 30px;
+	font-family: 'Poppins-SemiBold';
+	line-height: 187%;
+	width: 210px;
+	margin-bottom: 30px;
+}
+
+.email > p {
+	font-size: 16px;
+	line-height: 187%;
+	width: 545px;
+	margin-bottom: 74px;
+}
+
+.email .sub {
+	display: flex;
+	background: #1b1b1b;
+	padding: 40px 3%;
+	width: 97%;
+	border-radius: 15px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.email .sub h2 {
+	margin-bottom: 18px;
+	font-size: 30px;
+	font-family: 'Poppins-Med';
+	width: 240px;
+}
+
+.email .sub p {
+	font-size: 17px;
+	width: 516px;
+}
+
+.email .sub input {
+	background: #fff;
+	color: #333;
+	outline: none;
+	border: 0;
+	border-radius: 8px;
+	padding: 20px 30px;
+	width: 280px;
+	margin-left: 100px;
+	position: relative;
+	padding-right: 130px;
+}
+
+.email .sub button {
+	position: absolute;
+	border: 0;
+	padding: 15px 23px;
+	right: 135px;
+	transform: translateY(10%);
+	transition: all 500ms ease;
+}
+
+.email .sub button:hover {
+	border: 0;
+	background: #9c5100;
+}
+
+/* Подвал */
+
+footer {
+	background: #070707;
+	padding: 50px 0 30px 0;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 40px;
+}
+
+.footer .blocks {
+	width: 375px;
+}
+
+.footer .blocks span a.logo {
+	font-size: 24px;
+}
+
+.footer .blocks p {
+	font-size: 16px;
+	margin: 15px 0 30px 0;
+	width: 350px;
+}
+
+.footer .blocks:nth-child(2) {
+	margin-left: 60px;
+}
+
+.footer .blocks:nth-child(3) {
+	margin-right: 100px;
+}
+
+.footer .blocks ul {
+	list-style: none;
+	margin-top: 15px;
+	line-height: 186%;
+}
+
+.footer .blocks h2 {
+	font-family: 'Poppins-Med';
+	font-size: 17px;
+}
+
+.footer .icons {
+	display: flex;
+	width: 184px;
+	height: 60px;
+	transform: translate(-130%, 180%);
+}
+
+.footer .icons img {
+	transition: all 500ms ease;
+}
+
+.footer .icons img:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
+footer hr {
+	margin-bottom: 30px;
+}
+
+footer > p {
+	text-align: center;
+	transform: translateX(-2%);
+}
+
 .wrapper .loading {
 	display: flex;
 	gap: 20px;
@@ -612,6 +767,6 @@ header nav ul li a.btn:hover,
 }
 
 /* Селектор для ползунка при наведении */
-::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:active {
 	background: #9c5100; /* Цвет при наведении */
 }

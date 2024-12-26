@@ -401,7 +401,6 @@ header nav ul li.btn a:hover,
 	color: #333;
 	position: relative;
 	right: -10px;
-	z-index: 1;
 	padding-right: 130px;
 	top: 20px;
 }
@@ -412,7 +411,6 @@ header nav ul li.btn a:hover,
 
 .email .block button {
 	position: relative;
-	z-index: 1;
 	border: 0;
 	cursor: pointer;
 	transform: translate(255%);
